@@ -12,17 +12,20 @@ Install **[LidRun](https://lidrun.com)** with Homebrew — the macOS menu-bar ap
 ## Install
 
 ```sh
-brew tap aibrickai/lidrun
-brew install --cask lidrun
+brew install --cask aibrickai/lidrun/lidrun
 ```
 
-Homebrew 6+ refuses a third-party tap until you trust it once. If you see
-`Refusing to load cask ... from untrusted tap`, run:
+This one-line form auto-adds the tap and installs LidRun. Homebrew 6+ refuses a
+third-party tap until you trust it once, so if you hit
+`Refusing to load cask ... from untrusted tap`, run it as:
 
 ```sh
 brew trust aibrickai/lidrun
-brew install --cask lidrun
+brew install --cask aibrickai/lidrun/lidrun
 ```
+
+Prefer to tap first? `brew tap aibrickai/lidrun` then `brew install --cask lidrun`
+works the same.
 
 The DMG is **Developer-ID signed and Apple-notarized**, so it installs with no
 Gatekeeper workaround — and LidRun keeps itself up to date via Sparkle. Prefer a
@@ -82,6 +85,27 @@ see what a [closed-lid AI workflow](https://lidrun.com) actually looks like. Mor
 - 🌐 Website — [lidrun.com](https://lidrun.com) · [changelog](https://lidrun.com/changelog) · [safety](https://lidrun.com/safety)
 - 📦 Main repo — [github.com/aibrickai/lidrun](https://github.com/aibrickai/lidrun) (README, docs, releases)
 - 📖 Guides — [keeping your Mac awake](https://lidrun.com/blog/what-is-keeping-your-mac-awake) · [caffeinate explained](https://lidrun.com/blog/caffeinate-mac-command) · [LidRun vs the built-ins](https://lidrun.com/blog/best-mac-keep-awake-app-for-developers)
+
+## Connect
+
+Follow LidRun for release notes, closed-lid tips and behind-the-scenes builds.
+
+<p align="center">
+  <a href="https://lidrun.com"><img src="https://img.shields.io/badge/Website-lidrun.com-7b61ff?style=for-the-badge&logo=googlechrome&logoColor=white" alt="LidRun website" /></a>
+  <a href="https://facebook.com/lidrun.mac"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="LidRun on Facebook" /></a>
+  <a href="https://www.threads.com/@lidrun.mac"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="LidRun on Threads" /></a>
+  <a href="https://www.youtube.com/@lidrun"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="LidRun on YouTube" /></a>
+  <a href="https://www.tiktok.com/@lidrunapp"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="LidRun on TikTok" /></a>
+</p>
+
+<p align="center"><sub>Built by <strong>Henry AGI</strong> — the maker behind LidRun</sub></p>
+
+<p align="center">
+  <a href="https://x.com/henryaiagents"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Henry AGI on X" /></a>
+  <a href="https://www.threads.com/@mrhenry.agi"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Henry AGI on Threads" /></a>
+  <a href="https://www.instagram.com/mrhenry.agi"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Henry AGI on Instagram" /></a>
+  <a href="https://www.youtube.com/@henryxagi"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Henry AGI on YouTube" /></a>
+</p>
 
 ---
 
